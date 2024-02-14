@@ -1,0 +1,100 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Space is descendent combinator */
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+/* Greater-than is direct child combinator */
+
+main > p {
+    font-size: 1.5rem;
+}
+
+/* Plus is adjacent sibling selector */
+
+h2 + p {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+/* Tilde is sibling selector */
+
+.stars span:hover ~ span {
+    opacity: 0.2;
+}
+
+.stars span {
+    cursor: pointer;
+}
+
+/* Square brackets are attribute selector */
+
+a[href="#"] {
+    color: brown;
+}
+
+    /* Caret is to select Begins With querys */
+
+a[href^="http"] {
+    color: rgb(239, 93, 204);
+}
+
+    /* Dollar sign is to select Ends With querys */
+
+a[href$=".pdf"] {
+    color: springgreen;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: black;
+    padding: 0.5rem;
+}
+
+/* Initial, Hover, Active, Visited */
+
+nav a,
+nav a:link,
+nav a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.5s;
+}
+
+nav a:visited {
+    color: rgb(97, 143, 96);
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    background-color: aqua;
+    transform: scale(1.2);
+}
+
+a[href$=".pdf"]::after {
+    content: " \2913";
+    font-size: 1.3rem;
+}
+
+h2 + p::first-line {
+    color: red;
+}
+
+.rating::first-letter {
+    background-color: plum;
+    color: white;
+    padding: 0.25rem;
+    margin-right: 0.1rem;
+}
